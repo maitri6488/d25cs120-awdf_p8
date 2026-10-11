@@ -8,12 +8,12 @@
 
 ---
 
-## 📌 Objective
+## Objective
 To improve frontend performance using **lazy loading** (`React.lazy()`) and **route-based code splitting** techniques with meaningful **Suspense fallback UI**.
 
 ---
 
-## 🏗️ Architecture & Bundle Breakdown
+## Architecture & Bundle Breakdown
 
 ### 1. Before Optimization (Monolithic Single Bundle)
 All route components are statically imported at the top of `App.jsx`, bundling everything into one heavy file downloaded on initial page load:
@@ -35,7 +35,7 @@ index.html ──► index.js (App Shell + Router) ~167 kB
 
 ---
 
-## 📊 Before vs. After Optimization Comparison
+## Before vs. After Optimization Comparison
 
 | Metric | Baseline (Static Imports) | Optimized (Lazy Loading) | Improvement / Impact |
 | :--- | :---: | :---: | :---: |
@@ -59,7 +59,7 @@ dist/assets/index-B-yMQMDr.js       167.96 kB │ gzip: 54.88 kB  <-- Main app s
 
 ---
 
-## 💡 Key Features Implemented
+## Key Features Implemented
 
 1. **Route-based Code Splitting**:
    - `React.lazy()` applied across all route components: `Home`, `Tasks`, `Analytics`, `Contact`.
@@ -78,7 +78,7 @@ dist/assets/index-B-yMQMDr.js       167.96 kB │ gzip: 54.88 kB  <-- Main app s
 
 ---
 
-## 🧠 Key Viva Questions & Analysis
+## Key Viva Questions & Analysis
 
 ### Q1: What is the difference between the initial bundle and a lazy-loaded chunk in terms of when each is downloaded?
 > **Answer**:  
@@ -97,7 +97,7 @@ dist/assets/index-B-yMQMDr.js       167.96 kB │ gzip: 54.88 kB  <-- Main app s
 
 ---
 
-## 🚀 Steps to Run
+## Steps to Run
 
 Follow these commands in your terminal to set up, run, and test Practical 8:
 
@@ -127,7 +127,7 @@ npm run preview
 
 ---
 
-## 📸 Screenshots to Include in Lab File / Report
+## Screenshots to Include in Lab File / Report
 
 Capture and paste the following screenshots into your practical document:
 
@@ -146,4 +146,3 @@ Capture and paste the following screenshots into your practical document:
    - *Capture*: On the Analytics page, clicking the "Load Heavy Analytics Chart" button, showing the dynamic network request for `HeavyChart-*.js` and the rendered chart UI appearing below.
 6. **Screenshot 6 - Before vs. After Optimization Table / Bundle Size Comparison**:
    - *Capture*: Include the bundle comparison table from this README documenting the reduction in initial bundle transfer from monolithic ~175 kB down to 167 kB initial shell.
-
